@@ -3,15 +3,21 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <header>
+        <h1 class="underline underline-offset-3 mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Random Generator for Drawing</h1>
+      </header>
+      <button type="button" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Green to Blue</button>
+      <div class="container mx-auto">
+        <div class="flex justify-between">
+          <div class="w-1/2 text-center">
+            <h2 class="mb-5 underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600 text-xl">adjective</h2>
+            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">#adjective</span>
+          </div>
+          <div class="w-1/2 text-center">
+          <h2 class="mb-5 underline underline-offset-3 decoration-4 decoration-green-400 dark:decoration-green-600 text-xl">noun</h2>
+            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">#noun</span>
+          </div>
+        </div>
       </div>
     </main>
   )
