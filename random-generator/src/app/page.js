@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import words from './words.json'
 
 export default function Home() {
   return (
@@ -11,11 +12,19 @@ export default function Home() {
         <div class="flex justify-between">
           <div class="w-1/2 text-center">
             <h2 class="mb-5 underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600 text-xl">adjective</h2>
-            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">#adjective</span>
+            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">
+            {words.adjectives.map((adjectives) => {
+                return <option key={adjectives.id} value={adjectives.id}>{adjectives.adjectiv}</option>
+              })}
+            </span>
           </div>
           <div class="w-1/2 text-center">
           <h2 class="mb-5 underline underline-offset-3 decoration-4 decoration-green-400 dark:decoration-green-600 text-xl">noun</h2>
-            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">#noun</span>
+            <span class="mx-10 block max-w-none p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-bold text-red-400 text-lg">
+              {words.nouns.map((nouns) => {
+                return <option key={nouns.id} value={nouns.id}>{nouns.noun}</option>
+              })}
+            </span>
           </div>
         </div>
       </div>
